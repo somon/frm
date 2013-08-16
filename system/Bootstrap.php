@@ -15,7 +15,7 @@ class Bootstrap {
         $oRequest->parseRequestUri();
         $oController = ControllerFactory::make($oRequest->getController(), $oRequest);
         $sAction = 'action'.$oRequest->getAction();
-        $oController->{$sAction()};
+        $oController->$sAction();
     }
 
     public static function autoload($sClassName)

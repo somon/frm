@@ -148,7 +148,7 @@ class Request
 					$this->sRequestUri.='?'.$_SERVER['QUERY_STRING'];
 			}
 			else
-				throw new CException(Yii::t('yii','CHttpRequest is unable to determine the request URI.'));
+				throw new Exception('Request is unable to determine the request URI.');
 		}
 	}
 
